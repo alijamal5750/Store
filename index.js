@@ -43,7 +43,7 @@ app.use(express.json({limit:'20kb'}));
 app.use(mongoSanitize());
 
 //prevent or sanitize from cross side scripting (html,js,css) in body before validation layer : 
-app.use(xss());
+
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
